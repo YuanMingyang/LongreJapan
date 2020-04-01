@@ -15,7 +15,7 @@
 #ifdef NSFoundationVersionNumber_iOS_9_x_Max
 #import <UserNotifications/UserNotifications.h>
 #endif
-
+///回家哈哈哈哈哈哈哈哈
 @interface AppDelegate ()<JPUSHRegisterDelegate,WeiboSDKDelegate>
 @property(nonatomic,strong)NSTimer *authTimer;
 @end
