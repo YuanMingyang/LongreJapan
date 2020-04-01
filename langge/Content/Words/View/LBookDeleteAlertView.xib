@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="LBookDeleteAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="190"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f41-aU-BFX">
+                    <rect key="frame" x="0.0" y="139.5" width="300" height="0.5"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="fvl-iw-b5K"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC7-DK-PkJ">
+                    <rect key="frame" x="150" y="140" width="0.5" height="50"/>
+                    <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="0.5" id="AVN-rl-v7U"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KbC-kZ-Dcg">
+                    <rect key="frame" x="0.0" y="140" width="150" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="狠心删除">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="deleteBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Xa9-3M-YCQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pns-4A-lCz">
+                    <rect key="frame" x="150.5" y="140" width="149.5" height="50"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <state key="normal" title="我再想想">
+                        <color key="titleColor" red="0.98431372549999996" green="0.48627450979999998" blue="0.46274509800000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="cancelBtnClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="8ld-aT-mA5"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="您确定要删除《大家的日语 初级1》吗" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jdb-IW-zbh">
+                    <rect key="frame" x="20" y="20" width="260" height="47.5"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="确认删除后所有通关记录以及设置的学习目标将无法恢复！" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6K-gE-qZT">
+                    <rect key="frame" x="20" y="72.5" width="260" height="47"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="OC7-DK-PkJ" firstAttribute="top" secondItem="f41-aU-BFX" secondAttribute="bottom" id="0HI-Nu-LMj"/>
+                <constraint firstItem="Pns-4A-lCz" firstAttribute="leading" secondItem="OC7-DK-PkJ" secondAttribute="trailing" id="6v1-bQ-xUi"/>
+                <constraint firstItem="jdb-IW-zbh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="7Vd-OB-YsO"/>
+                <constraint firstAttribute="trailing" secondItem="f41-aU-BFX" secondAttribute="trailing" id="85s-Un-ahZ"/>
+                <constraint firstAttribute="bottom" secondItem="OC7-DK-PkJ" secondAttribute="bottom" id="CNX-gg-ixL"/>
+                <constraint firstAttribute="bottom" secondItem="Pns-4A-lCz" secondAttribute="bottom" id="Io7-ul-hsR"/>
+                <constraint firstItem="f41-aU-BFX" firstAttribute="top" secondItem="j6K-gE-qZT" secondAttribute="bottom" constant="20" id="PWz-g7-VtF"/>
+                <constraint firstItem="OC7-DK-PkJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="PZc-mg-ILT"/>
+                <constraint firstItem="jdb-IW-zbh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="Ryd-Pe-EcI"/>
+                <constraint firstItem="KbC-kZ-Dcg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Vt5-0A-5ku"/>
+                <constraint firstItem="Pns-4A-lCz" firstAttribute="top" secondItem="f41-aU-BFX" secondAttribute="bottom" id="Wdr-Td-YUx"/>
+                <constraint firstItem="j6K-gE-qZT" firstAttribute="top" secondItem="jdb-IW-zbh" secondAttribute="bottom" constant="5" id="Z2h-uP-ahh"/>
+                <constraint firstAttribute="trailing" secondItem="jdb-IW-zbh" secondAttribute="trailing" constant="20" id="brK-QY-ycx"/>
+                <constraint firstItem="j6K-gE-qZT" firstAttribute="height" secondItem="jdb-IW-zbh" secondAttribute="height" id="cBt-y3-Gll"/>
+                <constraint firstAttribute="trailing" secondItem="j6K-gE-qZT" secondAttribute="trailing" constant="20" id="cFg-Y8-nva"/>
+                <constraint firstItem="OC7-DK-PkJ" firstAttribute="leading" secondItem="KbC-kZ-Dcg" secondAttribute="trailing" id="dIn-Cd-6KP"/>
+                <constraint firstAttribute="bottom" secondItem="f41-aU-BFX" secondAttribute="bottom" constant="50" id="edJ-II-swc"/>
+                <constraint firstItem="f41-aU-BFX" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hos-4g-oSB"/>
+                <constraint firstAttribute="bottom" secondItem="KbC-kZ-Dcg" secondAttribute="bottom" id="opQ-Ec-V0C"/>
+                <constraint firstItem="KbC-kZ-Dcg" firstAttribute="top" secondItem="f41-aU-BFX" secondAttribute="bottom" id="ovj-YC-exQ"/>
+                <constraint firstItem="j6K-gE-qZT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="rSd-Ld-doG"/>
+                <constraint firstAttribute="trailing" secondItem="Pns-4A-lCz" secondAttribute="trailing" id="wYX-8M-MWe"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="titleLabel" destination="jdb-IW-zbh" id="izf-m7-YmZ"/>
+            </connections>
+        </view>
+    </objects>
+</document>

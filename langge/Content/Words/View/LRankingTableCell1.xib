@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LRankingTableCell1" id="KGk-i7-Jjw" customClass="LRankingTableCell1">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSU-Bq-ncg">
+                        <rect key="frame" x="20" y="0.0" width="47" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="47" id="g7X-56-ceJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon07" translatesAutoresizingMaskIntoConstraints="NO" id="tsI-bT-u7I">
+                        <rect key="frame" x="77" y="6" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="P2Q-Y3-ocS"/>
+                            <constraint firstAttribute="height" constant="32" id="oia-fA-eXo"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="60关" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrD-H7-CMX">
+                        <rect key="frame" x="250" y="0.0" width="50" height="43.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="k7b-LB-ahj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="哈哈哈" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Zf-gn-fS0">
+                        <rect key="frame" x="119" y="0.0" width="40" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="z6R-wH-B2S">
+                        <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.95294117649999999" green="0.95294117649999999" blue="0.95294117649999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="VcH-cc-8zF"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="PrD-H7-CMX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1hE-0T-cEd"/>
+                    <constraint firstItem="z6R-wH-B2S" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="6Jc-xR-RK3"/>
+                    <constraint firstItem="tsI-bT-u7I" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="6g1-8Y-kx3"/>
+                    <constraint firstItem="sSU-Bq-ncg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="7QT-2n-YV3"/>
+                    <constraint firstItem="tsI-bT-u7I" firstAttribute="leading" secondItem="sSU-Bq-ncg" secondAttribute="trailing" constant="10" id="9VR-56-ZrM"/>
+                    <constraint firstAttribute="trailing" secondItem="z6R-wH-B2S" secondAttribute="trailing" id="Cok-jB-sA5"/>
+                    <constraint firstAttribute="bottom" secondItem="6Zf-gn-fS0" secondAttribute="bottom" id="F6l-hC-kxm"/>
+                    <constraint firstItem="sSU-Bq-ncg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="QgR-TS-Vyp"/>
+                    <constraint firstItem="6Zf-gn-fS0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="YIv-Nz-yjY"/>
+                    <constraint firstItem="6Zf-gn-fS0" firstAttribute="leading" secondItem="tsI-bT-u7I" secondAttribute="trailing" constant="10" id="eq8-hM-CfY"/>
+                    <constraint firstAttribute="bottom" secondItem="PrD-H7-CMX" secondAttribute="bottom" id="lTU-ec-cVV"/>
+                    <constraint firstAttribute="bottom" secondItem="sSU-Bq-ncg" secondAttribute="bottom" id="lnA-5A-9h7"/>
+                    <constraint firstAttribute="trailing" secondItem="PrD-H7-CMX" secondAttribute="trailing" constant="20" id="s6B-2K-QvX"/>
+                    <constraint firstAttribute="bottom" secondItem="z6R-wH-B2S" secondAttribute="bottom" id="xgu-GL-4bc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="tsI-bT-u7I" id="oN4-me-Qqy"/>
+                <outlet property="nicknameLabel" destination="6Zf-gn-fS0" id="yFK-xi-Nz5"/>
+                <outlet property="rankingLabel" destination="sSU-Bq-ncg" id="MYQ-8B-uLn"/>
+                <outlet property="totalLabel" destination="PrD-H7-CMX" id="8Yh-iu-hlf"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon07" width="70" height="70"/>
+    </resources>
+</document>

@@ -1,0 +1,64 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - JCore (1.2.6)
+  - JPush (3.1.2):
+    - JCore (~> 1.2.6)
+  - JSONModel (1.8.0)
+  - Masonry (1.1.0)
+  - MJRefresh (3.1.15.7)
+  - SDWebImage (4.4.6):
+    - SDWebImage/Core (= 4.4.6)
+  - SDWebImage/Core (4.4.6)
+  - SVProgressHUD (2.2.5)
+  - WMPageController (2.5.2)
+
+DEPENDENCIES:
+  - AFNetworking
+  - JPush
+  - JSONModel
+  - Masonry
+  - MJRefresh
+  - SDWebImage
+  - SVProgressHUD
+  - WMPageController
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - JCore
+    - JPush
+    - JSONModel
+    - Masonry
+    - MJRefresh
+    - SDWebImage
+    - SVProgressHUD
+    - WMPageController
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  JCore: cae516dd2bf1a73b578ce6e1065abd49e709e0f7
+  JPush: d0cead70ba223a6a3b52749899ebda830dfbc49a
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  SDWebImage: 3f3f0c02f09798048c47a5ed0a13f17b063572d8
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  WMPageController: 0c7624d2b48e4f1ab92371688cf6744ed701575d
+
+PODFILE CHECKSUM: 9207817122ec638ebbf5cf2e880f8c3cc32c10ce
+
+COCOAPODS: 1.6.1

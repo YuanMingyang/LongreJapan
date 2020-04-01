@@ -1,0 +1,243 @@
+//
+//  PrefixHeader.pch
+//  langge
+//
+//  Created by samlee on 2019/3/20.
+//  Copyright © 2019 yang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#define ScreenWidth  [UIScreen mainScreen].bounds.size.width
+#define ScreenHeight [UIScreen mainScreen].bounds.size.height
+#define RGB(R,G,B)   [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:1]
+#define StatusHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define NaviHeight   self.navigationController.navigationBar.frame.size.height
+#define KIsiPhoneX ((int)((ScreenHeight/ScreenWidth)*100) == 216)?YES:NO
+
+
+#if IS_DEV
+//测试
+#define API_Root        @"http://testjapan.iopfun.cn/v1/"
+#elif IS_PRODUCT
+//正式
+#define API_Root        @"http://japanapp.iopfun.cn/v1/"
+#endif
+
+
+#define J_PUSH_KEY           @"f9fb39dac76a6e1af986f2d0"
+#define J_PUSH_SRCRET        @"6079c1ebe500be715752c8f2"
+
+#define QQ_APP_ID            @"101563652"
+#define QQ_APP_KEY           @"7d3cdaaa18c4f3fb16913e0603fc240a"
+
+#define WECHAT_APP_ID        @"wx34cac0e7863c1626"
+#define WECHAT_APP_SCRET     @"9450c1aeefbca9595667b2a1b68f0558"
+
+#define WB_APPKEY            @"3208372729"
+#define WB_APPSecret         @"a2c13606d3ac889a68a8995107b3e9b0"
+#define kRedirectURI         @"http://japanapp.iopfun.cn"
+
+
+/** 获取微信token */
+#define API_GETWX_Token      @"https://api.weixin.qq.com/sns/oauth2/access_token"
+/** 获取微信信息 */
+#define API_GET_WX_UserInfo  @"https://api.weixin.qq.com/sns/userinfo"
+/** 获取QQ信息 */
+#define API_GET_QQ_UserInfo  @"https://graph.qq.com/user/get_userinfo"
+
+
+
+/** jwt授权 */
+#define API_GetAuth         [NSString stringWithFormat:@"%@Common/getAuth",API_Root]
+
+/** 获取手机验证码 */
+#define API_GetMobileAuth   [NSString stringWithFormat:@"%@Customer/mobileAuth",API_Root]
+
+/** 短信登录&注册 */
+#define API_AuthLogin       [NSString stringWithFormat:@"%@Customer/login",API_Root]
+
+/** 账号密码登录 */
+#define API_SimpleLogin     [NSString stringWithFormat:@"%@Customer/simpleLogin",API_Root]
+
+/** 完善用户信息 */
+#define API_saveUserInfo    [NSString stringWithFormat:@"%@Customer/saveUserInfo",API_Root]
+
+/** 验证手机验证码 */
+#define API_validateVerifyCode  [NSString stringWithFormat:@"%@Customer/validateVerifyCode",API_Root]
+
+/** 获取用户信息 */
+#define API_GetUserInfo     [NSString stringWithFormat:@"%@Customer/getUserInfo",API_Root]
+
+/** 重置密码 */
+#define API_RestUserPassword [NSString stringWithFormat:@"%@Customer/restUserPassword",API_Root]
+
+/** 吐槽列表 */
+#define API_FeedbackList    [NSString stringWithFormat:@"%@Handle/feedbackList",API_Root]
+
+/** 吐槽详情 */
+#define API_FeedbackInfo    [NSString stringWithFormat:@"%@Handle/feedbackInfo",API_Root]
+
+/** 收藏列表 */
+#define API_CollectionList  [NSString stringWithFormat:@"%@Handle/collectionList",API_Root]
+
+/** 获奖列表 */
+#define API_Prize_List      [NSString stringWithFormat:@"%@Handle/prize_list",API_Root]
+
+/** 绑定/解绑 */
+#define API_Binding         [NSString stringWithFormat:@"%@Customer/binding",API_Root]
+
+/** banner/精选课程/新闻 */
+#define API_GetfxData       [NSString stringWithFormat:@"%@Home/getfxData",API_Root]
+
+/** 新闻详情 */
+#define API_GetNewInfo      [NSString stringWithFormat:@"%@News/getNewsInfo",API_Root]
+
+/** 收藏、取消收藏 */
+#define API_collectionActive [NSString stringWithFormat:@"%@Handle/collectionActive",API_Root]
+
+/** 发现页搜索数据接口 */
+#define API_FX_Search       [NSString stringWithFormat:@"%@Home/fx_search",API_Root]
+
+/** 课程详情 */
+#define API_GetCourseInfo   [NSString stringWithFormat:@"%@Course/getCoureseInfo",API_Root]
+
+/** 当月签到列表 */
+#define API_Sign_List       [NSString stringWithFormat:@"%@Handle/sign_in_list",API_Root]
+
+/** 用户签到 */
+#define API_Sign_Active     [NSString stringWithFormat:@"%@Handle/sign_in_active",API_Root]
+
+/** 获奖列表 */
+#define API_Draw_List       [NSString stringWithFormat:@"%@Handle/prize_list",API_Root]
+
+
+/** 奖品详情 */
+#define API_Prize_Details   [NSString stringWithFormat:@"%@Handle/prize_details",API_Root]
+
+/** 用户导航栏情报标签(包括全部标签) */
+#define API_UserNewClassList [NSString stringWithFormat:@"%@Handle/userNewClassList",API_Root]
+
+/** 用户自定义感兴趣的新闻标签 */
+#define API_User_newsclass_active  [NSString stringWithFormat:@"%@Handle/user_newsclass_active",API_Root]
+
+/** 新闻列表 */
+#define API_GetNewList     [NSString stringWithFormat:@"%@News/getNewList",API_Root]
+
+/** 课程列表 */
+#define API_GetCourseList  [NSString stringWithFormat:@"%@Course/getCourseList",API_Root]
+
+/** 更新用户奖品状态 */
+#define API_Save_User_Prize  [NSString stringWithFormat:@"%@Handle/save_user_prize",API_Root]
+
+/** 大家都在搜 */
+#define API_Get_Hot_Search   [NSString stringWithFormat:@"%@Home/get_hot_search",API_Root]
+
+/** 获取app下载地址二维码 */
+#define API_Get_QRCode       [NSString stringWithFormat:@"%@Home/get_qrcode",API_Root]
+
+/** 用户吐槽 */
+#define API_FeedbackActive     [NSString stringWithFormat:@"%@Handle/feedbackActive",API_Root]
+
+/** 系统消息列表 */
+#define API_GetMessageList     [NSString stringWithFormat:@"%@Message/getMessageList",API_Root]
+
+/** 系统消息详情 */
+#define API_GetMessageDetail         [NSString stringWithFormat:@"%@Message/getMessageDetail",API_Root]
+
+/** 搜单词 */
+#define API_GetWordData         [NSString stringWithFormat:@"%@Lexicon/getWordData",API_Root]
+
+/** 用户词书列表 */
+#define API_GetPlanList         [NSString stringWithFormat:@"%@Studyplan/getPlanList",API_Root]
+
+/** 所有词书列表 */
+#define API_GetAllBook          [NSString stringWithFormat:@"%@Studyplan/getAllBook",API_Root]
+
+/** 用户添加书词 */
+#define API_AddWordbook         [NSString stringWithFormat:@"%@Studyplan/addWordbook",API_Root]
+
+/** x词书学习目标 */
+#define API_StudyTarget         [NSString stringWithFormat:@"%@Studyplan/StudyTarget",API_Root]
+
+/** 设定词书学习计划 */
+#define API_StudyTargetAction   [NSString stringWithFormat:@"%@Studyplan/studyTargetAction",API_Root]
+
+/** 开启关闭每日学习计划 */
+#define API_UpdStudyTargetAction    [NSString stringWithFormat:@"%@Studyplan/updStudyTargetAction",API_Root]
+
+/** 删除用户词书 */
+#define API_DelUserWordbook         [NSString stringWithFormat:@"%@Studyplan/delUserWordbook",API_Root]
+
+/** 学习工具 */
+#define API_GetStudyTool            [NSString stringWithFormat:@"%@Home/getStudyTool",API_Root]
+
+/** 生词列表 */
+#define API_WordStrangeList         [NSString stringWithFormat:@"%@Wordstrange/wordStrangeList",API_Root]
+
+/** 生词添加 */
+#define API_WordStrangeAdd          [NSString stringWithFormat:@"%@Wordstrange/wordStrangeAdd",API_Root]
+
+/** 生词操作 */
+#define API_WordStrangeAction       [NSString stringWithFormat:@"%@Wordstrange/wordStrangeAction",API_Root]
+
+/** 大神排行榜 */
+#define API_RankingList             [NSString stringWithFormat:@"%@Ranking/rankingList",API_Root]
+
+/** 勋章 */
+#define API_GetUserMedal            [NSString stringWithFormat:@"%@Ranking/getUserMedal",API_Root]
+
+/** 错题集 */
+#define API_SubjectWrongList        [NSString stringWithFormat:@"%@Subjectwrong/subjectWrongList",API_Root]
+
+/** 错题集删除 */
+#define API_DelSubjectWrong         [NSString stringWithFormat:@"%@Subjectwrong/delSubjectWrong",API_Root]
+
+/** 五十音页接口 */
+#define API_FiftytonesIndex         [NSString stringWithFormat:@"%@Fiftytones/fiftytonesIndex",API_Root]
+
+/** 用户协议、隐私条款 */
+#define API_Get_clause              [NSString stringWithFormat:@"%@Home/get_clause",API_Root]
+
+/** 五十音学习接口 */
+#define API_FiftytonesDetails       [NSString stringWithFormat:@"%@Fiftytones/fiftytonesDetails",API_Root]
+
+/** 单词模糊查询 */
+#define API_Get_WordList       [NSString stringWithFormat:@"%@Lexicon/getWordList",API_Root]
+
+/**开屏页*/
+#define API_StarPage            [NSString stringWithFormat:@"%@Home/startPage",API_Root]
+
+/**领取课程*/
+#define API_ReceiveAction       [NSString stringWithFormat:@"%@Handle/userRecordAction",API_Root]
+
+/**客服地址*/
+#define API_CSUrl               [NSString stringWithFormat:@"%@Home/csUrl",API_Root]
+
+#define API_Idfa_checkAdmove    [NSString stringWithFormat:@"%@Idfa/checkAdmove",API_Root]
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <AFNetworking.h>
+#import <Masonry.h>
+#import <SVProgressHUD.h>
+#import <UIImageView+WebCache.h>
+#import "UIView+Modify.h"
+#import "XSTools.h"
+#import "UIViewController+NavigationBarHidden.h"
+#import "GGGraphics.h"
+#import "APIManager.h"
+#import "SingleTon.h"
+#import "RFKit.h"
+#import <JSONModel.h>
+#import <MJRefresh.h>
+#import "WeiboSDK.h"
+
+
+
+#endif
+
+#endif /* PrefixHeader_pch */
