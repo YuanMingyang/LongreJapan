@@ -1398,4 +1398,24 @@ static AFHTTPSessionManager *manager = nil;
         NSLog(@"idfa添加失败:%@",error.localizedDescription);
     }];
 }
+
+-(void)gkJapanWithSource:(NSString *)source{
+    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
+    dic[@"status"] = @(10);
+    dic[@"source"] = source;
+    if ([[SingleTon getInstance] getUser_tocken]) {
+        dic[@"user_token"] = [[SingleTon getInstance] getUser_tocken];
+    }
+    NSLog(@"开屏页数据:%@",dic);
+    NSString *url = [NSString stringWithFormat:@"%@?token=%@",API_GK_Japan,[SingleTon getInstance].authTocken];
+    [manager POST:url parameters:dic progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if ([responseObject[@"returnCode"] intValue] == 0) {
+            NSLog(@"开屏页数据记录成功");
+        }else{
+            NSLog(@"开屏页数据记录失败:%@",responseObject[@"errorMsg"]);
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        NSLog(@"开屏页数据记录失败:%@",error.localizedDescription);
+    }];
+}
 @end

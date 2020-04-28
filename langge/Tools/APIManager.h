@@ -193,6 +193,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**添加idfa*/
 -(void)addIDFA;
+
+/**新增点击开屏页数据记录*/
+-(void)gkJapanWithSource:(NSString *)source;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -64,6 +64,12 @@
     [WeiboSDK enableDebugMode:YES];
     BOOL success = [WeiboSDK registerApp:WB_APPKEY];
     
+    
+    
+    
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeNone categories:nil];
+
+    [[UIApplication sharedApplication] registerUserNotificationSettings:settings];
     return YES;
 }
 
@@ -119,6 +125,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     //[[AVAudioSession sharedInstance] setActive:YES error:nil];
+    [self resetBageNumber];
+    
     
     
     if ([SingleTon getInstance].isShare) {
@@ -137,6 +145,10 @@
     }];
     self.authTimer = nil;
     self.authTimer=[NSTimer scheduledTimerWithTimeInterval:7200 target:self selector:@selector(getAuth) userInfo:nil repeats:YES];
+    
+    
+    
+    
 }
 
 -(void)getAuth{
@@ -214,5 +226,22 @@
         }
     }
 }
+
+
+
+
+
+-(void)resetBageNumber{
+    if(@available(iOS 11.0, *)){
+        [UIApplication sharedApplication].applicationIconBadgeNumber = 0;
+    }else{
+        UILocalNotification *clearEpisodeNotification = [[UILocalNotification alloc] init];
+        clearEpisodeNotification.fireDate = [NSDate dateWithTimeIntervalSinceNow:(0.3)];
+        clearEpisodeNotification.timeZone = [NSTimeZone defaultTimeZone];
+        clearEpisodeNotification.applicationIconBadgeNumber = 0;
+        [[UIApplication sharedApplication] scheduleLocalNotification:clearEpisodeNotification];
+    }
+}
+
 
 @end

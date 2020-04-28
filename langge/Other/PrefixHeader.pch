@@ -217,6 +217,9 @@
 
 #define API_Idfa_checkAdmove    [NSString stringWithFormat:@"%@Idfa/checkAdmove",API_Root]
 
+/**新增点击开屏页数据记录*/
+#define API_GK_Japan            [NSString stringWithFormat:@"%@Zt/gk_japan",API_Root]
+
 #ifdef __OBJC__
 
 #import <UIKit/UIKit.h>

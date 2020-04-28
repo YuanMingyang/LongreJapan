@@ -79,9 +79,9 @@
 }
 
 -(void)loadStartPage{
-    [SVProgressHUD show];
+    //[SVProgressHUD show];
     [[APIManager getInstance] getStartPageWithCallback:^(BOOL success, id  _Nonnull data) {
-        [SVProgressHUD dismiss];
+        //[SVProgressHUD dismiss];
         if (success) {
             self.startPageView.data = data;
         }else{
@@ -93,7 +93,7 @@
 }
 
 -(void)getUserInfo{
-    [SVProgressHUD showWithStatus:@""];
+    //[SVProgressHUD showWithStatus:@""];
     [[APIManager getInstance] getUserInfoWithCallback:^(BOOL success, id  _Nonnull result) {
         if (success) {
             [SVProgressHUD dismiss];
@@ -140,6 +140,7 @@
         vc.closeBlock = ^{
             [weakSelf showPrivacyPolicy];
         };
+        [[APIManager getInstance] gkJapanWithSource:urlStr];
         [weakSelf.navigationController pushViewController:vc animated:YES];
         [weakSelf.startPageView removeFromSuperview];
     };
@@ -190,7 +191,7 @@
 }
 
 -(void)auth{
-    [SVProgressHUD showWithStatus:@"加载中"];
+    //[SVProgressHUD showWithStatus:@"加载中"];
     __weak typeof(self)weakSelf = self;
     [[APIManager getInstance] getAuthWith:^(BOOL success, id  _Nonnull resule) {
         if (success) {
